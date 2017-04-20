@@ -1,6 +1,7 @@
 $(() => {
     $("#upload_finalize").on('click', (e) => {
       e.preventDefault();
+      $("#upload_status").text("Processing upload");
       const files = document.getElementById('file-input').files;
       const file = files[0];
       $.get('/sign-s3',
@@ -12,7 +13,7 @@ $(() => {
           xhr.onreadystatechange = () => {
             if(xhr.readyState === 4){
               if(xhr.status === 200){
-                console.log('success')
+                $("#upload_status").text("Upload complete");
               }
               else{
                 alert('Could not upload file.');
