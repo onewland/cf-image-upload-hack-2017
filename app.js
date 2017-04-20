@@ -1,6 +1,7 @@
 const express = require('express');
 const aws = require('aws-sdk');
 const request = require('request');
+const assert = require('assert');
 
 const app = express();
 app.set('views', './views');
@@ -19,13 +20,17 @@ app.get('/sign-s3', (req, res) => {
   const s3 = new aws.S3();
   const fileName = req.query['file-name'];
   const fileType = req.query['file-type'];
+  const jobId = req.query['job-id'];
+
   const s3Params = {
     Bucket: S3_BUCKET,
-    Key: fileName,
+    Key: `job_zip_uploads/upload_${jobId}.zip`,
     Expires: 60,
     ContentType: fileType,
     ACL: 'public-read'
   };
+  
+  assert.equal(fileType, 'application/zip');
 
   s3.getSignedUrl('putObject', s3Params, (err, data) => {
     if(err){
@@ -34,7 +39,7 @@ app.get('/sign-s3', (req, res) => {
     }
     const returnData = {
       signedRequest: data,
-      url: `https://${S3_BUCKET}.s3.amazonaws.com/${fileName}`
+      url: `https://${S3_BUCKET}.s3.amazonaws.com/${fileName}` // this is a bad URL
     };
     res.write(JSON.stringify(returnData));
     res.end();
