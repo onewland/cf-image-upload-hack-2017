@@ -15,7 +15,7 @@
 
     <script src="/client_app.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="hack.css">
+    <link rel="stylesheet" type="text/css" href="hack2.css">
     <title>Crowdflower-Zipit</title>
     <link href="https://dy5zjr62m3i6k.cloudfront.net/assets/favicon-11a413b5c0be70f054ebd3e3a0dfbb6c.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
 
@@ -27,21 +27,21 @@
   <header>
       <div id="title_img"> <img src="img/logo.png" alt="crowdflower logo"> </div>
       <div id="title_text"><p>ZipIt Tool</p></div>
-    </header>
+  </header>
     <div class="container">
+    <div class="left_side">
     <div class="row">
-        <div class="jumbotron col-md-8 col-md-offset-2">
+    <div class="jumbotron col-md-6 col-md-offset-3">
           <h2>Instructions</h2>
-          <ol id="instruction_list">
+          <ul id="instruction_list">
             <li>Upload your zipped photo folder</li>
             <li>Go to newly created job containing your images</li>
-
-          </ol>
-        </div>
+          </ul>
+      </div>
       </div>
       <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1 id="status">Please select a file</h1>
+        <div class="jumbotron col-md-6 col-md-offset-3">
+          <h2 id="status">Please select a file</h2>
 
           <form class="dropzone" method="POST" action="/save-details">
             <input type="file" id="file-input"></input>
@@ -49,18 +49,21 @@
           </form>
         </div>
       </div>
+      </div>
+      <div class="right_side">
       <div class="row">
-        <div class="jumbotron col-md-8 col-md-offset-2">
+        <div class="jumbotron col-md-6 col-md-offset-3">
           <a href="#" id="cf_job_url" style="display: none;"><h2>Link to Job</h2></a>
           <h2 id="cf_job_preflight">Job URL will be here</h2>
         </div>
       </div>
       <div class="row">
-        <div class="jumbotron col-md-8 col-md-offset-2">
+        <div class="jumbotron col-md-6 col-md-offset-3">
           <h2>Status:</h2>
           <h2 id="upload_status">Awaiting upload</h2>
         </div>
       </div>
+    </div>
     </div>
   </body>
 </html>

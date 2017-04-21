@@ -1,0 +1,150 @@
+<style>
+    html,body{
+        width: 100%
+        height: 100%;
+    }
+    body {
+        font-family: "Lato",sans-serif;
+        font-weight: 400;
+        font-size: 100%;
+        line-height: 20pt;
+        background-color: #F5F7F9;
+    }
+
+    h1,h2,h3,p{
+        color:#34495e;
+    }
+    h2{
+        font-size: 20pt;
+        line-height: 18pt;
+    }
+
+    h3 {
+        font-size: 16pt;
+        line-height: 14pt;   
+    }
+
+    h1 {
+        font-size: 24pt;
+        line-height: 24pt;
+    }
+
+    header{
+        background-color: #FFF;
+        width: 100%;
+        position: absolute;
+        height: 10%;
+        top: 0;
+    }
+
+    #title_img{
+        width: 50%;
+        float: left;
+        height: 100%;
+    }
+
+    header img{
+        width: 30%;
+        height: auto;
+        vertical-align: middle;
+        float: left;
+        margin-left:5%;
+        padding: 2%;
+    }
+
+    #title_text{
+        font-size: 24pt;
+        vertical-align: middle;
+        height: 100%;
+        line-height: 50pt;
+    }
+
+    #title_text p{
+        margin-top:10%;
+        margin: auto;
+        float: right;
+        margin-right: 5%;
+        color: #8e9fb1;
+        height: 100%; 
+    }
+
+    .container {
+        height: 100%;
+        margin-bottom: 20px;
+        display: block;
+        margin-top: 100px;
+        background-color: #FFF;
+        color: #34495E;
+        padding-top: 30px;
+        padding-right: 15px;
+        padding-left: 15px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #E3E3E3;
+        border-radius: 5px;
+        display: block;
+        border-bottom: solid 1px #cdcdcf;
+        -webkit-box-shadow: 0px 1px 5px 0px rgba(36,49,71,0.15);
+        box-shadow: 0px 1px 5px 0px rgba(36,49,71,0.15);
+        -webkit-transition: .01s;
+        transition: .01s;
+        text-align: center;
+    }
+
+    .container ul{
+        list-style-type: none;
+        text-align: center;
+        padding-left: 0;
+        font-size:18px; 
+        font-weight: 400;
+        letter-spacing: .2px;
+        color:#34495e;
+    }
+
+    .instruction_container{
+        margin-top: 20%;
+        width:80%;
+    }
+
+    .left_side,.right_side{
+        width: 50%;
+        height: 100%;
+    }
+    .left_side{
+        float: left;
+    }
+    .right_side{
+        float: right;
+    }
+
+    .jumbotron.col-md-6.col-md-offset-3{
+        background-color: #f5f7f9;
+        width: 90%;
+        height: 200px;
+        padding: 5%;
+        margin-right:5%;
+        margin-left: 5%;
+        margin-bottom: 5%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #E3E3E3;
+        border-radius: 5px;
+        display: block;
+        border-bottom: solid 1px #cdcdcf;
+        -webkit-box-shadow: 0px 1px 5px 0px rgba(36,49,71,0.15);
+        box-shadow: 0px 1px 5px 0px rgba(36,49,71,0.15);
+        -webkit-transition: .01s;
+        transition: .01s;
+        text-align: center;
+    }
+
+    .btn{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: #FFF;
+        background-color: #6095EB
+    }
+
+
+
+    </style>
