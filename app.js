@@ -14,7 +14,7 @@ const CROWDFLOWER_URL = 'https://api.crowdflower.com/v1';
 const BASE_JOB_ID = process.env.BASE_JOB_ID;
 const CF_API_KEY = process.env.CF_API_KEY;
 
-app.get('/', (req, res) => res.render('upload.html'));
+app.get('/', (req, res) => res.render('main.html'));
 
 app.get('/sign-s3', (req, res) => {
   const s3 = new aws.S3();
@@ -29,7 +29,7 @@ app.get('/sign-s3', (req, res) => {
     ContentType: fileType,
     ACL: 'public-read'
   };
-  
+
   assert.equal(fileType, 'application/zip');
 
   s3.getSignedUrl('putObject', s3Params, (err, data) => {
