@@ -23,7 +23,10 @@ $(() => {
       $.get('/copy-job', {}, (data) => {
         const jobCopyInfo = JSON.parse(data);
         const jobId = jobCopyInfo.job_id;
-        $("#cf_job_url").text(`https://make.crowdflower.com/jobs/${jobId}`);
+        $("#cf_job_url").attr('href', `https://make.crowdflower.com/jobs/${jobId}`);
+        $("#cf_job_url").show();
+        $("#cf_job_preflight").hide();
+
 
         $.get('/sign-s3',
           {"file-name": file.name, "file-type": file.type, "job-id": jobId},
